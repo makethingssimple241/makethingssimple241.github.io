@@ -3,6 +3,30 @@ let sidebarDisplayed = false
 
 let hideSidebarBtnBars = document.getElementsByClassName("hideSidebarBtnBar")
 
+const handleOnMouseMove = c => {
+    const {
+        currentTarget: target
+    } = c
+
+    const rect = target.getBoundingClientRect(),
+        x = c.clientX - rect.left, y = c.clientY - rect.top
+
+    target.style.setProperty("--mouse-x", `${x}px`)
+    target.style.setProperty("--mouse-y", `${y}px`)
+}
+
+function init_main() {
+    if (window.location.hash == "#about") {
+        let aboutParagraphChildren = document.querySelectorAll(".aboutParagraph>*")
+
+        for (let i = 0; i < aboutParagraphChildren.length; i++) {
+            const element = aboutParagraphChildren[i]
+            element.style.animationName = "move-in-from-left"
+            element.style.opacity = "1"
+        }
+    }
+}
+
 function init_videos() {
     if (window.matchMedia("(min-width: 800px)").matches) {
         sidebarDisplayed = true
@@ -92,11 +116,5 @@ function hideSidebar() {
         }
 
         sidebarDisplayed = true
-    }
-}
-
-window.onwheel = function() {
-    if (document.querySelector("main").scrollTop >= window.innerHeight - 65) {
-        revealAboutParagraphChildren()
     }
 }
