@@ -3,30 +3,6 @@ let sidebarDisplayed = false
 
 let hideSidebarBtnBars = document.getElementsByClassName("hideSidebarBtnBar")
 
-const handleOnMouseMove = c => {
-    const {
-        currentTarget: target
-    } = c
-
-    const rect = target.getBoundingClientRect(),
-        x = c.clientX - rect.left, y = c.clientY - rect.top
-
-    target.style.setProperty("--mouse-x", `${x}px`)
-    target.style.setProperty("--mouse-y", `${y}px`)
-}
-
-function init_main() {
-    if (window.location.hash == "#about") {
-        let aboutParagraphChildren = document.querySelectorAll(".aboutParagraph>*")
-
-        for (let i = 0; i < aboutParagraphChildren.length; i++) {
-            const element = aboutParagraphChildren[i]
-            element.style.animationName = "move-in-from-left"
-            element.style.opacity = "1"
-        }
-    }
-}
-
 function init_videos() {
     if (window.matchMedia("(min-width: 800px)").matches) {
         sidebarDisplayed = true
@@ -36,12 +12,6 @@ function init_videos() {
             element.classList.add("true")
             element.style.display = "unset"
         }
-    }
-}
-
-function init_hover_effect() {
-    for (const project of document.querySelectorAll(".project")) {
-        project.onmousemove = c => handleOnMouseMove(c)
     }
 }
 
@@ -69,22 +39,6 @@ function openMenu() {
         main.style.filter = "blur(10px)";
         menu.style.top = "60px";
         menuDisplayed = true;
-    }
-}
-
-function revealAboutParagraphChildren() {
-    let aboutParagraphChildren = document.querySelectorAll(".aboutParagraph>*")
-
-    for (let i = 0; i < aboutParagraphChildren.length; i++) {
-        const element = aboutParagraphChildren[i]
-        element.style.animationName = "move-in-from-left"
-        element.style.opacity = "1"
-    }
-}
-
-function checkIfLocationHashIsHashAbout() {
-    if (window.location.hash == "#about") {
-        revealAboutParagraphChildren()
     }
 }
 
@@ -146,7 +100,3 @@ window.onwheel = function() {
         revealAboutParagraphChildren()
     }
 }
-
-window.addEventListener("hashchange", function() {
-    checkIfLocationHashIsHashAbout()
-})
