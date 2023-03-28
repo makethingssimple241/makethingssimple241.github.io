@@ -511,7 +511,7 @@ main {
 }
 
 .video .youtubeEmbed {
-    width: 90%;
+    min-width: 50% !important;
     max-height: 70% !important;
     border-radius: 20px;
     aspect-ratio: 16 / 9;
