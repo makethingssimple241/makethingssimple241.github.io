@@ -303,6 +303,7 @@ main {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     transition: filter .4s ease-in-out;
+    z-index: 1;
 }
 
 .home_main {
