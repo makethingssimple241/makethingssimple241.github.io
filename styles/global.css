@@ -102,7 +102,7 @@ button.secondary * {
     background-color: var(--text-color);
     position: absolute;
     left: 0;
-    bottom: -1px;
+    bottom: -0.25rem;
     border-radius: 3px;
     transition: width .1s ease-in-out;
 }
