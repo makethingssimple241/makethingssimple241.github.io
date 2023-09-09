@@ -1,0 +1,26 @@
+body {
+    overflow: hidden;
+}
+
+.noscript {
+    width: 100dvw;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+    background-color: var(--background-color);
+    position: relative;
+    z-index: 6;
+}
+
+.noscript > div {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon {
+    font-size: 200px;
+}

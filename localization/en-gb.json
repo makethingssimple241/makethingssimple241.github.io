@@ -1,0 +1,24 @@
+{
+    "strings": {
+        "name": "MakeThingsSimple",
+        "headline": "Welcome to MakeThingsSimple",
+        "tagline": "Free high-quality computer tutorials",
+        "subscribe_now": "Subscribe now!",
+        "visit_our_youtube_channel": "Visit our YouTube channel",
+        "home": "Home",
+        "about": "About",
+        "videos": "Videos",
+        "the_content_we_make": "The content we make",
+        "the_content_we_make_p": "We will make high-quality computer tutorials on programming, graphics design, etc.",
+        "our_mission": "Our mission",
+        "mission": "Our mission is to provide free, high-quality computer tutorials. We aim to make more people in the world learn to use computers",
+        "no_resources_video": "No links or files for this video.",
+        "no_resources_series": "No links or files for this series.",
+        "file_not_found": "File not found.",
+        "file_not_found_description": "The file you're requesting cannot be found. Please verify that the URL is entered correctly.",
+        "back_to_home": "Head back to our homepage",
+        "copyright": "© 2023 MakeThingsSimple",
+        "en-gb": "English (United Kingdom)",
+        "zh-tw": "繁體中文"
+    }
+}

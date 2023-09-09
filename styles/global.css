@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+    font-size: 16px;
+    --accent-color: #d93a1e;
+    --secondary-accent-color: blanchedalmond;
+    --text-color: black;
+    --background-color: #fbfcf8;
+    --secondary-background-color: #fdf6e4;
+}
+
+* {
+    margin: 0;
+    color: var(--text-color);
+    scrollbar-width: 0;
+    font-family: monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 3.052rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.441rem;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.953rem;
+}
+
+h4 {
+    font-size: 1.563rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+small {
+    font-size: 0.8rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    height: 30px;
+    border: none;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+button.primary {
+    background-color: var(--text-color);
+    border: 1px var(--text-color) solid;
+}
+
+button.primary * {
+    color: black;
+}
+
+button.secondary {
+    background-color: transparent;
+    border: 1px var(--text-color) solid;
+}
+
+button.secondary * {
+    color: var(--text-color);
+}
+
+.link {
+    position: relative;
+}
+
+.link small {
+    margin: 0;
+}
+
+.link::after,
+.link p::after,
+.navLinks li:after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--text-color);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 3px;
+    transition: width .1s ease-in-out;
+}
+
+.link:hover::after,
+.link:hover p::after,
+.navLinks li:hover::after {
+    width: 100%;
+}
+
+.emphasis {
+    color: var(--accent-color);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.circleImg {
+    border-radius: 50%
+}
+
+.navLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-inline-start: 0;
+}
+
+.navLinks li {
+    padding-left: 0;
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.socialLinks.navBarSocialLinks {
+    justify-content: right;
+    margin-inline: 15px;
+}
+
+.socialLinks i,
+.socialLinks .menuBtnContainer {
+    line-height: 25px;
+    font-size: 18px;
+    color: black;
+    background-color: var(--secondary-accent-color);
+    padding: 5px;
+    border-radius: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.socialLinks i {
+    width: 25px;
+    height: 25px;
+}
+
+.socialLinks .menuBtnContainer {
+    width: 35px;
+    height: 35px;
+    display: none;
+}
+
+.socialLinks i:hover {
+    color: var(--accent-color);
+}
