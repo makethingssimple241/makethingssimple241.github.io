@@ -1,0 +1,13 @@
+.menu {
+    width: 100vw;
+    top: calc(60px - 100vh);
+    left: 0;
+    z-index: 5;
+    position: relative;
+    background-color: var(--secondary-background-color);
+    padding-block: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top .4s ease-in-out;
+}

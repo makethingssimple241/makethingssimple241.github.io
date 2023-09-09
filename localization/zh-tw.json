@@ -1,0 +1,24 @@
+{
+    "strings": {
+        "name": "MakeThingsSimple",
+        "headline": "歡迎來到 MakeThingsSimple",
+        "tagline": "免費高質電腦教育視頻",
+        "subscribe_now": "立即訂閱",
+        "visit_our_youtube_channel": "造訪我們的YouTube頻道",
+        "home": "首頁",
+        "about": "關於我們",
+        "videos": "影片",
+        "the_content_we_make": "我們製作的內容",
+        "the_content_we_make_p": "我們製作的內容是免費，高質的編程、電腦藝術設計等教育視頻。",
+        "our_mission": "我們的使命",
+        "mission": "我們的使命是提供免費，高質的電腦教育視頻。我們的目標是讓世界上更多人學會使用電腦。",
+        "no_resources_video": "本視頻沒有附屬連結或檔案。",
+        "no_resources_series": "本系列沒有附屬連結或檔案。",
+        "file_not_found": "找不到您所請求的檔案。",
+        "file_not_found_description": "我們找不到您所請求的檔案。請您覆核您輸入的網址是否正確。",
+        "back_to_home": "回到主頁",
+        "copyright": "© 2023 MakeThingsSimple",
+        "en-gb": "English (United Kingdom)",
+        "zh-tw": "繁體中文"
+    }
+}

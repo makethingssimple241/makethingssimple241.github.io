@@ -1,0 +1,40 @@
+footer {
+    width: 100%;
+    background-color: var(--secondary-accent-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: end;
+}
+
+footer * {
+    --text-color: black;
+}
+
+footer small {
+    margin-block: 0.5rem;
+}
+
+.footerLinks {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-block: 0.75rem;
+}
+
+.footerLinks .navLinks {
+    margin-inline: 1rem;
+}
+
+#language-selector {
+    background-color: var(--secondary-accent-color);
+    border: transparent;
+    margin-inline: 1rem;
+    width: fit-content;
+}

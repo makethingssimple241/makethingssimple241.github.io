@@ -1,0 +1,190 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: white;
+        --background-color: #333333;
+        --secondary-background-color: #444444;
+    }
+}
+
+@media (prefers-reduce-motion: reduce) {
+    * {
+        animation: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2.441rem;
+    }
+
+    h2 {
+        font-size: 1.953rem;
+    }
+
+    h3 {
+        font-size: 1.563rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    small:not(.landingLink small),
+    .text_small {
+        font-size: 0.64rem;
+    }
+
+    #landing>*:not(.custom-shape-divider-bottom) {
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Navigation */
+
+    nav {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav #title {
+        margin: 0;
+    }
+
+    nav .navLinks {
+        display: none;
+    }
+
+    .socialLinks .menuBtnContainer {
+        display: flex;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .navLinks {
+        margin-block: 1.25rem;
+    }
+
+    nav .socialLinks.navBarSocialLinks a {
+        display: none;
+    }
+
+    /* Navigation end */
+
+    /* Main */
+
+    /* Videos */
+
+    .videos_main footer {
+        width: 100vw;
+        left: 0;
+    }
+
+    .video {
+        width: 100vw;
+        left: 0;
+    }
+
+    .videos_sidebar {
+        width: 100vw;
+        left: -100vw;
+        border-top-right-radius: 0;
+    }
+
+    /* Videos end */
+
+    /* Footer */
+
+    footer .footerLinks {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+    }
+
+    #language-selector {
+        margin-block: 0.25rem;
+    }
+
+    /* Footer end */
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 1.953rem;
+    }
+
+    h2 {
+        font-size: 1.563rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+    }
+
+    small:not(.landingLink small),
+    .text_small {
+        font-size: 0.64rem;
+    }
+
+    .landingBtns {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .landingLink {
+        margin-top: 20px;
+    }
+}
+
+@media (max-height: 450px) {
+    h1 {
+        font-size: 1.563rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 0.8rem;
+    }
+
+    h5 {
+        font-size: 0.64rem;
+    }
+
+    .timeline_line {
+        height: 100vh;
+    }
+
+    footer {
+        height: calc(100vh - 80px);
+        margin-top: 60px;
+    }
+
+    .menu {
+        height: calc(100vh - 90px);
+    }
+}
