@@ -92,9 +92,6 @@ main.home {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.landingBtns {
     margin-top: 20px;
 }
 
