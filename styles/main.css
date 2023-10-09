@@ -40,7 +40,6 @@ main.home {
 #landing h1,
 #landing p,
 #landing small:not(a small),
-#landing button,
 #about p {
     margin-inline: 10px;
 }
@@ -60,7 +59,7 @@ main.home {
 }
 
 #landing>* {
-    max-width: 50%;
+    max-width: 80vw;
 }
 
 #landing *:not(button *) {
@@ -89,14 +88,20 @@ main.home {
 }
 
 .landingBtns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
     margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.landingBtns a {
+    width: 100%;
 }
 
 .cta {
-    width: fit-content;
+    width: 100%;
     padding: 20px;
 }
 

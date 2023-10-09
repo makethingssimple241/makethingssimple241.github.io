@@ -6,12 +6,6 @@
     }
 }
 
-@media (prefers-reduce-motion: reduce) {
-    * {
-        animation: none;
-    }
-}
-
 @media (max-width: 1000px) {
     h1 {
         font-size: 2.441rem;
@@ -37,13 +31,8 @@
         font-size: 0.8rem;
     }
 
-    small:not(.landingLink small),
-    .text_small {
+    small {
         font-size: 0.64rem;
-    }
-
-    #landing>*:not(.custom-shape-divider-bottom) {
-        max-width: 80vw;
     }
 }
 
@@ -80,8 +69,6 @@
     }
 
     /* Navigation end */
-
-    /* Main */
 
     /* Videos */
 
@@ -143,15 +130,17 @@
     .text_small {
         font-size: 0.64rem;
     }
+}
+
+@media (max-width: 500px) {
+    /* Main */
 
     .landingBtns {
-        flex-direction: column;
-        gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
-    .landingLink {
-        margin-top: 20px;
-    }
+    /* Main end */
 }
 
 @media (max-height: 450px) {
