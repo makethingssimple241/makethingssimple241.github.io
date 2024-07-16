@@ -1,14 +1,12 @@
 footer {
-    width: 100%;
+    align-items: center;
     background-color: var(--secondary-accent-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
     bottom: 0;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 1rem;
+    position: relative;
     scroll-snap-align: end;
 }
 
@@ -34,7 +32,6 @@ footer small {
 
 #language-selector {
     background-color: var(--secondary-accent-color);
-    border: transparent;
     margin-inline: 1rem;
     width: fit-content;
 }

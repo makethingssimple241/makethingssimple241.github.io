@@ -64,7 +64,7 @@
         margin-block: 1.25rem;
     }
 
-    nav .socialLinks.navBarSocialLinks a {
+    nav .socialLinks a {
         display: none;
     }
 
@@ -132,7 +132,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     /* Main */
 
     .landingBtns {

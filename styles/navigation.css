@@ -35,9 +35,19 @@ nav:not(.video_nav) *:not(.socialLinks i) {
     font-weight: 700;
 }
 
-.descr {
-    font-size: 14px;
-    font-weight: 300;
+nav > .socialLinks > * > i,
+nav > .socialLinks > .menuBtnContainer
+{
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+nav > .socialLinks > * > i:hover,
+nav > .socialLinks > .menuBtnContainer:hover
+{
+    background-color: rgba(211, 211, 211, 0.25);
+    color: var(--text-color);
 }
 
 .menuBtnContainer {
@@ -45,19 +55,15 @@ nav:not(.video_nav) *:not(.socialLinks i) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
     cursor: pointer;
-}
-
-.menuBtnContainer:hover * {
-    background-color: var(--accent-color);
 }
 
 .menuBtnBar {
     width: 20px;
-    height: 4px;
-    background-color: black;
-    border-radius: 4px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 3px;
     transition: rotate .1s ease-in-out;
 }
 
