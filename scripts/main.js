@@ -1,17 +1,4 @@
 let menuDisplayed = false
-let sidebarDisplayed = false
-
-const handleOnMouseMove = c => {
-    const {
-        currentTarget: target
-    } = c
-
-    const rect = target.getBoundingClientRect(),
-        x = c.clientX - rect.left, y = c.clientY - rect.top
-
-    target.style.setProperty("--mouse-x", `${x}px`)
-    target.style.setProperty("--mouse-y", `${y}px`)
-}
 
 function init() {
     console.log(navigator.language)
