@@ -10,11 +10,11 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/navigation.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+	<link rel="stylesheet" href="styles/navigation.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/menu.css">
+	<link rel="stylesheet" href="styles/footer.css">
+	<link rel="stylesheet" href="styles/responsive.css">
     <!-- External CSS end -->
 
     <!-- External Scripts -->
@@ -27,45 +27,45 @@
 <body onload="init()">
     <!-- Navigation -->
     <nav class="video_nav">
-        <a href="index.html">
-            <div id="title">
-                <img class="logo circleImg" src="images/logo.png">
-                <div class="titleText">
-                    <p class="name">MakeThingsSimple</p>
-                </div>
-            </div>
-        </a>
-        <ul class="navLinks">
-            <li>
-                <a href="index.html#landing">Home</a>
-            </li>
-            <li>
-                <a href="index.html#about">About</a>
-            </li>
-            <li>
-                <a href="videos.html">Videos</a>
-            </li>
-        </ul>
-        <div class="socialLinks navBarSocialLinks">
-            <a href="https://youtube.com/@MakeThingsSimple" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://github.com/makethingssimple241" target="_blank">
-                <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.facebook.com/make.things.simple.pc" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com/CreateFinder1" target="_blank">
-                <i class="fa-brands fa-twitter"></i>
-            </a>
-            <button class="menuBtnContainer" onclick="openMenu()">
-                <div class="menuBtnBar menuBtnBarTop"></div>
-                <div class="menuBtnBar menuBtnBarMiddle"></div>
-                <div class="menuBtnBar menuBtnBarBottom"></div>
-            </button>
-        </div>
-    </nav>
+		<a href="index.html">
+			<div id="title">
+				<img class="logo circleImg" src="images/logo.png">
+				<div class="titleText">
+					<p class="name" data-text="name"></p>
+				</div>
+			</div>
+		</a>
+		<ul class="navLinks">
+			<li>
+				<a href="index.html#landing" data-text="home"></a>
+			</li>
+			<li>
+				<a href="index.html#about" data-text="about"></a>
+			</li>
+			<li>
+				<a href="videos.html" data-text="videos"></a>
+			</li>
+		</ul>
+		<div class="socialLinks justify-right margin-right-1rem">
+			<a href="https://youtube.com/@MakeThingsSimple" target="_blank">
+				<i class="fa-brands fa-youtube"></i>
+			</a>
+			<a href="https://github.com/makethingssimple241" target="_blank">
+				<i class="fa-brands fa-github"></i>
+			</a>
+			<a href="https://www.facebook.com/make.things.simple.pc" target="_blank">
+				<i class="fa-brands fa-facebook"></i>
+			</a>
+			<a href="https://twitter.com/CreateFinder1" target="_blank">
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+			<button class="menuBtnContainer" onclick="openMenu()">
+				<div class="menuBtnBar menuBtnBarTop"></div>
+				<div class="menuBtnBar menuBtnBarMiddle"></div>
+				<div class="menuBtnBar menuBtnBarBottom"></div>
+			</button>
+		</div>
+	</nav>
     <!-- Navigation end -->
 
     <!-- Main -->
@@ -73,9 +73,20 @@
         <!-- Videos -->
         <article id="makeCSimple" class="video">
             <h2>Make C Simple</h2>
-            <a class="link" href="https://github.com/makethingssimple241/std" target="_blank">
-                <p>View GitHub repository</p>
-            </a>
+            <div class="horizontal gap-1_5rem">
+                <a class="link" href="https://github.com/makethingssimple241/QCore" target="_blank">
+                    <div class="horizontal gap-0_5rem">
+                        <i class="fa-brands fa-github"></i>
+                        <p>QCore</p>
+                    </div>
+                </a>
+                <a class="link" href="https://github.com/makethingssimple241/std" target="_blank">
+                    <div class="horizontal gap-0_5rem">
+                        <i class="fa-brands fa-github"></i>
+                        <p>std and stdx</p>
+                    </div>
+                </a>
+            </div>
             <br>
             <iframe class="youtubeEmbed"
                 src="https://www.youtube.com/embed/videoseries?si=yR9bYiWT5RWx9tYq&amp;list=PLuasihUCW_DeLkvCSoHB67_K4TAQj0E-Z"
@@ -105,7 +116,10 @@
             <h2>My Science Project - micro:bit “Touch” Game Console</h2>
             <a class="link" href="https://github.com/makethingssimple241/microbit-touch-game"
                 target="_blank">
-                <p>View GitHub archive</p>
+                <div class="horizontal gap-0_5rem">
+                    <i class="fa-brands fa-github"></i>
+                    <p>microbit-touch-game</p>
+                </div>
             </a>
             <br>
             <iframe class="youtubeEmbed" src="https://www.youtube.com/embed/Bm4PxOGAelY" title="YouTube video player"
@@ -153,24 +167,24 @@
         <!-- Videos end -->
 
         <footer>
-            <div class="footerLinks">
-                <select name="languages" id="language-selector" onchange="localize(this.value)">
-                    <option value="en-gb" data-text="en-gb"></option>
-                    <option value="zh-tw" data-text="zh-tw"></option>
-                </select>
-                <ul class="navLinks">
-                    <li>
-                        <a href="index.html#landing" data-text="home"></a>
-                    </li>
-                    <li>
-                        <a href="index.html#about" data-text="about"></a>
-                    </li>
-                    <li>
-                        <a href="videos.html" data-text="videos"></a>
-                    </li>
-                </ul>
-                <div class="socialLinks navBarSocialLinks">
-                    <a href="https://youtube.com/@MakeThingsSimple" target="_blank">
+			<div class="footerLinks">
+				<select name="languages" id="language-selector" onchange="localize(this.value)">
+					<option value="en-gb" data-text="en-gb"></option>
+					<option value="zh-tw" data-text="zh-tw"></option>
+				</select>
+				<ul class="navLinks">
+					<li>
+						<a href="index.html#landing" data-text="home"></a>
+					</li>
+					<li>
+						<a href="index.html#about" data-text="about"></a>
+					</li>
+					<li>
+						<a href="videos.html" data-text="videos"></a>
+					</li>
+				</ul>
+				<div class="socialLinks justify-right">
+					<a href="https://youtube.com/@MakeThingsSimple" target="_blank">
 						<i class="fa-brands fa-youtube"></i>
 					</a>
 					<a href="https://github.com/makethingssimple241" target="_blank">
@@ -182,10 +196,10 @@
 					<a href="https://twitter.com/CreateFinder1" target="_blank">
 						<i class="fa-brands fa-twitter"></i>
 					</a>
-                </div>
-            </div>
-            <small>&#169 2023 MakeThingsSimple</small>
-        </footer>
+				</div>
+			</div>
+			<small data-text="copyright"></small>
+		</footer>
     </main>
     <!-- Main end -->
 

@@ -1,33 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 :root {
     font-size: 16px;
     --accent-color: #d93a1e;
-    --secondary-accent-color: blanchedalmond;
-    --text-color: black;
     --background-color: #fbfcf8;
+    --secondary-accent-color: blanchedalmond;
     --secondary-background-color: #fdf6e4;
+    --text-color: black;
 }
 
 * {
-    margin: 0;
     color: var(--text-color);
+    font-family: "Roboto Mono", monospace;
+    margin: 0;
     scrollbar-width: 0;
-    font-family: monospace;
 }
 
 body {
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
 }
 
 h1 {
     font-size: 3.052rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -58,13 +56,14 @@ a {
 }
 
 button {
-    height: 30px;
+    align-items: center;
     border: none;
     border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
+    display: flex;
+    font-size: 0.75rem;
+    height: 30px;
+    justify-content: center;
 }
 
 button.primary {
@@ -85,6 +84,18 @@ button.secondary * {
     color: var(--text-color);
 }
 
+select {
+    appearance: none;
+    border: 1px solid var(--text-color);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    text-align-last: center;
+}
+
+select:hover {
+    background-color: rgba(170, 170, 170, 0.25) !important;
+}
+
 .link {
     position: relative;
 }
@@ -96,15 +107,15 @@ button.secondary * {
 .link::after,
 .link p::after,
 .navLinks li:after {
-    content: "";
-    width: 0;
-    height: 3px;
     background-color: var(--text-color);
-    position: absolute;
-    left: 0;
-    bottom: -0.25rem;
     border-radius: 3px;
+    bottom: -0.25rem;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
     transition: width .1s ease-in-out;
+    width: 0;
 }
 
 .link:hover::after,
@@ -125,6 +136,35 @@ button.secondary * {
     border-radius: 50%
 }
 
+.horizontal {
+    align-items: center;
+    display: flex;
+}
+
+.gap-0_5rem {
+    gap: 0.5rem;
+}
+
+.gap-1rem {
+    gap: 1rem;
+}
+
+.gap-1_5rem {
+    gap: 1.5rem;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.margin-right-1rem {
+    margin-right: 1rem;
+}
+
+.margin-top-1_25rem {
+    margin-top: 1.25rem;
+}
+
 .navLinks {
     display: flex;
     justify-content: center;
@@ -142,36 +182,30 @@ button.secondary * {
 
 .socialLinks {
     display: flex;
-    justify-content: center;
     gap: 18px;
-}
-
-.socialLinks.navBarSocialLinks {
-    justify-content: right;
-    margin-inline: 15px;
 }
 
 .socialLinks i,
 .socialLinks .menuBtnContainer {
-    line-height: 25px;
-    font-size: 18px;
-    color: black;
     background-color: var(--secondary-accent-color);
+    border-radius: 0.4rem;
+    color: black;
+    font-size: 18px;
+    line-height: 25px;
     padding: 5px;
-    border-radius: 0.5rem;
     text-align: center;
     vertical-align: middle;
 }
 
 .socialLinks i {
-    width: 25px;
     height: 25px;
+    width: 25px;
 }
 
 .socialLinks .menuBtnContainer {
-    width: 35px;
-    height: 35px;
     display: none;
+    height: 35px;
+    width: 35px;
 }
 
 .socialLinks i:hover {
