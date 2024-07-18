@@ -1,8 +1,8 @@
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-color: white;
         --background-color: #333333;
         --secondary-background-color: #444444;
+        --text-color: white;
     }
 }
 
@@ -56,8 +56,8 @@
     }
 
     .navLinks {
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 
     footer .navLinks {
@@ -73,19 +73,13 @@
     /* Videos */
 
     .videos_main footer {
-        width: 100vw;
         left: 0;
+        width: 100vw;
     }
 
     .video {
-        width: 100vw;
         left: 0;
-    }
-
-    .videos_sidebar {
         width: 100vw;
-        left: -100vw;
-        border-top-right-radius: 0;
     }
 
     /* Videos end */

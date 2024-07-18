@@ -4,23 +4,23 @@
 :root {
     font-size: 16px;
     --accent-color: #d93a1e;
-    --secondary-accent-color: blanchedalmond;
-    --text-color: black;
     --background-color: #fbfcf8;
+    --secondary-accent-color: blanchedalmond;
     --secondary-background-color: #fdf6e4;
+    --text-color: black;
 }
 
 * {
-    margin: 0;
     color: var(--text-color);
-    scrollbar-width: 0;
     font-family: "Roboto Mono", monospace;
+    margin: 0;
+    scrollbar-width: 0;
 }
 
 body {
+    background-color: var(--background-color);
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
 }
 
 h1 {
@@ -107,15 +107,15 @@ select:hover {
 .link::after,
 .link p::after,
 .navLinks li:after {
-    content: "";
-    width: 0;
-    height: 3px;
     background-color: var(--text-color);
-    position: absolute;
-    left: 0;
-    bottom: -0.25rem;
     border-radius: 3px;
+    bottom: -0.25rem;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
     transition: width .1s ease-in-out;
+    width: 0;
 }
 
 .link:hover::after,
@@ -187,25 +187,25 @@ select:hover {
 
 .socialLinks i,
 .socialLinks .menuBtnContainer {
-    line-height: 25px;
-    font-size: 18px;
-    color: black;
     background-color: var(--secondary-accent-color);
-    padding: 5px;
     border-radius: 0.4rem;
+    color: black;
+    font-size: 18px;
+    line-height: 25px;
+    padding: 5px;
     text-align: center;
     vertical-align: middle;
 }
 
 .socialLinks i {
-    width: 25px;
     height: 25px;
+    width: 25px;
 }
 
 .socialLinks .menuBtnContainer {
-    width: 35px;
-    height: 35px;
     display: none;
+    height: 35px;
+    width: 35px;
 }
 
 .socialLinks i:hover {

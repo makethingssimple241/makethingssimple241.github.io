@@ -19,11 +19,11 @@ footer small {
 }
 
 .footerLinks {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     margin-block: 0.75rem;
+    width: 100%;
 }
 
 .footerLinks .navLinks {

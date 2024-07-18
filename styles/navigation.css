@@ -1,10 +1,10 @@
 nav {
-    width: 100%;
-    height: 60px;
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    height: 60px;
     position: fixed;
+    width: 100%;
     z-index: 6;
 }
 
@@ -25,9 +25,9 @@ nav:not(.video_nav) *:not(.socialLinks i) {
 }
 
 .logo {
-    width: 35px;
     height: 35px;
     margin-left: 10px;
+    width: 35px;
 }
 
 .name {
@@ -51,25 +51,25 @@ nav > .socialLinks > .menuBtnContainer:hover
 }
 
 .menuBtnContainer {
+    align-items: center;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 4px;
-    cursor: pointer;
+    justify-content: center;
 }
 
 .menuBtnBar {
-    width: 20px;
-    height: 3px;
     background-color: var(--text-color);
     border-radius: 3px;
+    height: 3px;
     transition: rotate .1s ease-in-out;
+    width: 20px;
 }
 
 .menuBtnBar.true.menuBtnBarTop {
-    translate: 0px 7px;
     rotate: 45deg;
+    translate: 0px 7px;
 }
 
 .menuBtnBar.true.menuBtnBarMiddle {
@@ -77,6 +77,6 @@ nav > .socialLinks > .menuBtnContainer:hover
 }
 
 .menuBtnBar.true.menuBtnBarBottom {
-    translate: 0px -7px;
     rotate: -45deg;
+    translate: 0px -7px;
 }
