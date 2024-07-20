@@ -9,7 +9,7 @@ nav {
 }
 
 nav:not(.video_nav) *:not(.socialLinks i) {
-    color: white !important;
+    --text-color: white;
 }
 
 #title {
