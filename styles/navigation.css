@@ -8,7 +8,7 @@ nav {
     z-index: 6;
 }
 
-nav:not(.video_nav) *:not(.socialLinks i) {
+nav:not(.video_nav) {
     --text-color: white;
 }
 
