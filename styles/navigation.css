@@ -8,8 +8,8 @@ nav {
     z-index: 6;
 }
 
-nav:not(.video_nav) *:not(.socialLinks i) {
-    color: white !important;
+nav:not(.video_nav) {
+    --text-color: white;
 }
 
 #title {
