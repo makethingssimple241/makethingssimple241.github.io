@@ -1,33 +1,31 @@
 let menuDisplayed = false
 
 function init() {
-    console.log(navigator.language)
-    localize(navigator.language)
+    initialize_components()
+        .then(localize)
 }
 
 function openMenu() {
-    let menuBtnBars = document.querySelectorAll(".menuBtnBar")
+    let bars = document.querySelectorAll(".menu-btn > *")
     let menu = document.querySelector(".menu")
     let main = document.querySelector("main")
 
-    for (let i = 0; i < menuBtnBars.length; i++) {
-        const element = menuBtnBars[i];
+    for (let bar of bars) {
         if (menuDisplayed) {
-            element.classList.remove("true")
+            bar.removeAttribute("active")
         }
         else {
-            element.classList.add("true")
+            bar.setAttribute("active", "true")
         }
     }
 
     if (menuDisplayed) {
-        main.style.filter = "blur(0px)";
-        menu.style.top = "calc(60px - 100vh)";
-        menuDisplayed = false;
+        main.style.filter = "blur(0px)"
+        menu.style.top = "calc(60px - 100vh)"
+    } else {
+        main.style.filter = "blur(10px)"
+        menu.style.top = "60px"
     }
-    else {
-        main.style.filter = "blur(10px)";
-        menu.style.top = "60px";
-        menuDisplayed = true;
-    }
+
+    menuDisplayed = !menuDisplayed
 }

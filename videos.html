@@ -18,57 +18,16 @@
     <!-- External CSS end -->
 
     <!-- External Scripts -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/component_system.js"></script>
     <script src="scripts/localization.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="https://kit.fontawesome.com/cfc0e682fc.js" crossorigin="anonymous"></script>
     <!-- External Scripts end -->
 </head>
 
 <body onload="init()">
-    <!-- Navigation -->
-    <nav class="video_nav">
-		<a href="index.html">
-			<div id="title">
-				<img class="logo circleImg" src="images/logo.png">
-				<div class="titleText">
-					<p class="name" data-text="name"></p>
-				</div>
-			</div>
-		</a>
-		<ul class="navLinks">
-			<li>
-				<a href="index.html#landing" data-text="home"></a>
-			</li>
-			<li>
-				<a href="index.html#about" data-text="about"></a>
-			</li>
-			<li>
-				<a href="videos.html" data-text="videos"></a>
-			</li>
-		</ul>
-		<div class="socialLinks justify-right margin-right-1rem">
-			<a href="https://youtube.com/@MakeThingsSimple" target="_blank">
-				<i class="fa-brands fa-youtube"></i>
-			</a>
-			<a href="https://github.com/makethingssimple241" target="_blank">
-				<i class="fa-brands fa-github"></i>
-			</a>
-			<a href="https://www.facebook.com/make.things.simple.pc" target="_blank">
-				<i class="fa-brands fa-facebook"></i>
-			</a>
-			<a href="https://twitter.com/CreateFinder1" target="_blank">
-				<i class="fa-brands fa-twitter"></i>
-			</a>
-			<button class="menuBtnContainer" onclick="openMenu()">
-				<div class="menuBtnBar menuBtnBarTop"></div>
-				<div class="menuBtnBar menuBtnBarMiddle"></div>
-				<div class="menuBtnBar menuBtnBarBottom"></div>
-			</button>
-		</div>
-	</nav>
-    <!-- Navigation end -->
+    <nav component-name="nav"></nav>
 
-    <!-- Main -->
     <main class="videos_main">
         <!-- Videos -->
         <article id="makeCSimple" class="video">
@@ -166,73 +125,10 @@
         </article>
         <!-- Videos end -->
 
-        <footer>
-			<div class="footerLinks">
-				<select name="languages" id="language-selector" onchange="localize(this.value)">
-					<option value="en-gb" data-text="en-gb"></option>
-					<option value="zh-tw" data-text="zh-tw"></option>
-				</select>
-				<ul class="navLinks">
-					<li>
-						<a href="index.html#landing" data-text="home"></a>
-					</li>
-					<li>
-						<a href="index.html#about" data-text="about"></a>
-					</li>
-					<li>
-						<a href="videos.html" data-text="videos"></a>
-					</li>
-				</ul>
-				<div class="socialLinks justify-right">
-					<a href="https://youtube.com/@MakeThingsSimple" target="_blank">
-						<i class="fa-brands fa-youtube"></i>
-					</a>
-					<a href="https://github.com/makethingssimple241" target="_blank">
-						<i class="fa-brands fa-github"></i>
-					</a>
-					<a href="https://www.facebook.com/make.things.simple.pc" target="_blank">
-						<i class="fa-brands fa-facebook"></i>
-					</a>
-					<a href="https://twitter.com/CreateFinder1" target="_blank">
-						<i class="fa-brands fa-twitter"></i>
-					</a>
-				</div>
-			</div>
-			<small data-text="copyright"></small>
-		</footer>
+        <footer component-name="footer"></footer>
     </main>
-    <!-- Main end -->
 
-    <!-- Menu -->
-    <div class="menu">
-        <div class="menuContent">
-            <ul class="navLinks">
-                <li>
-                    <a href="index.html#landing" data-text="home"></a>
-                </li>
-                <li>
-                    <a href="index.html#about" data-text="about"></a>
-                </li>
-                <li>
-                    <a href="videos.html" data-text="videos"></a>
-                </li>
-                <div class="socialLinks">
-                    <a href="https://youtube.com/@MakeThingsSimple" target="_blank">
-						<i class="fa-brands fa-youtube"></i>
-					</a>
-					<a href="https://github.com/makethingssimple241" target="_blank">
-						<i class="fa-brands fa-github"></i>
-					</a>
-					<a href="https://www.facebook.com/make.things.simple.pc" target="_blank">
-						<i class="fa-brands fa-facebook"></i>
-					</a>
-					<a href="https://twitter.com/CreateFinder1" target="_blank">
-						<i class="fa-brands fa-twitter"></i>
-					</a>
-                </div>
-        </div>
-    </div>
-    <!-- Menu end -->
+    <div class="menu" component-name="menu"></div>
 </body>
 
 </html>
