@@ -2,6 +2,7 @@
     align-items: center;
     background-color: var(--secondary-background-color);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     left: 0;
     position: relative;
@@ -9,5 +10,5 @@
     top: calc(60px - 100vh);
     transition: top .4s ease-in-out;
     width: 100vw;
-    z-index: 5;
+    z-index: var(--menu-z-index);
 }
