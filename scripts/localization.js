@@ -15,8 +15,6 @@ async function localize(preference = null) {
         localizationLanguage = preference
     }
 
-    console.log(`Localizing document in ${localizationLanguage}`)
-
     languageSwitcher.value = localizationLanguage
 
     let res = await fetch(`../localization/${localizationLanguage}.json`)
