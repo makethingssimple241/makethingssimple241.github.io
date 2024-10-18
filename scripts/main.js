@@ -1,20 +1,19 @@
 let menuDisplayed = false
 
-function init() {
-    initialize_components()
-        .then(localize)
+async function init() {
+    await initialize_components()
+    await localize()
 }
 
 function openMenu() {
-    let bars = document.querySelectorAll(".menu-btn > *")
+    let bars = document.querySelectorAll(".menu-btn .bars > *")
     let menu = document.querySelector(".menu")
     let main = document.querySelector("main")
 
     for (let bar of bars) {
         if (menuDisplayed) {
             bar.removeAttribute("active")
-        }
-        else {
+        } else {
             bar.setAttribute("active", "true")
         }
     }

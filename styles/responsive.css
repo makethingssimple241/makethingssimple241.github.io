@@ -1,7 +1,6 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #333333;
-        --secondary-background-color: #444444;
         --text-color: white;
         --inverted-text-color: black;
     }
@@ -51,7 +50,7 @@
     }
 
     .nav-icons .menu-btn {
-        display: flex;
+        display: initial;
     }
 
     .nav-links {

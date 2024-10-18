@@ -5,9 +5,15 @@
         "tagline": "Free high-quality computer tutorials",
         "subscribe_now": "Subscribe now!",
         "visit_our_youtube_channel": "Visit our YouTube channel",
+
+        "std": "std",
+        "std_description": "A library that adds C++'s STL and Boost to C",
+        "std_view_gh_page": "View GitHub page",
+        
         "home": "Home",
         "about": "About",
         "videos": "Videos",
+
         "the_content_we_make": "The content we make",
         "the_content_we_make_p": "We will make high-quality computer tutorials on programming, graphics design, etc.",
         "our_mission": "Our mission",

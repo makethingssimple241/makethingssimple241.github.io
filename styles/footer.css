@@ -16,10 +16,6 @@ footer * {
     --text-color: black;
 }
 
-footer .nav-icons i:hover {
-    color: var(--accent-color);
-}
-
 footer > .main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
