@@ -8,11 +8,6 @@ nav {
     z-index: var(--nav-z-index);
 }
 
-#title {
-    display: flex;
-    align-items: center;
-}
-
 nav .nav-icons > * {
     background-color: transparent;
     border: 1px solid var(--text-color);
@@ -27,15 +22,17 @@ nav .nav-icons > *:hover {
 }
 
 .menu-btn {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: center;
+    aspect-ratio: 1;
+    display: none;
+    height: fit-content;
 }
 
-.menu-btn > * {
+.menu-btn .bars {
+    height: 30px;
+    width: 30px;
+}
+
+.menu-btn .bars > * {
     background-color: var(--text-color);
     border-radius: 3px;
     height: 3px;
@@ -43,16 +40,16 @@ nav .nav-icons > *:hover {
     width: 20px;
 }
 
-.menu-btn .top[active] {
+.menu-btn .bars .top[active] {
     rotate: 45deg;
     translate: 0px 7px;
 }
 
-.menu-btn .middle[active] {
+.menu-btn .bars .middle[active] {
     opacity: 0;
 }
 
-.menu-btn .bottom[active] {
+.menu-btn .bars .bottom[active] {
     rotate: -45deg;
     translate: 0px -7px;
 }

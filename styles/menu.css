@@ -1,12 +1,13 @@
 .menu {
     align-items: center;
-    background-color: var(--secondary-background-color);
+    background-color: var(--secondary-accent-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     left: 0;
     position: relative;
-    padding-block: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
     top: calc(60px - 100vh);
     transition: top .4s ease-in-out;
     width: 100vw;

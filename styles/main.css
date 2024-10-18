@@ -12,10 +12,9 @@ main {
     width: 100%;
 }
 
-#landing,
+#home,
 #about,
 #file_not_found {
-    display: flex;
     height: 100dvh;
     height: 100vh;
     position: relative;
@@ -26,6 +25,29 @@ main {
 
 /* landing */
 
+#home {
+    display: flex;
+}
+
+.landing-slideshow {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    /* required when using scroll snapping */
+    overflow: auto;
+    position: relative;
+    width: 100%;
+}
+
+#home section {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 100%;
+}
+
+#home section > * {
+    max-width: 80vw;
+}
+
 #landing {
     align-items: center;
     display: flex;
@@ -33,10 +55,6 @@ main {
     justify-content: center;
     text-align: center;
     width: 100%;
-}
-
-#landing > * {
-    max-width: 80vw;
 }
 
 .landing-btns {
@@ -66,6 +84,29 @@ main {
 
 .cta p {
     font-weight: 700;
+}
+
+.landing-slideshow-btns {
+    justify-content: space-between;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 2rem);
+}
+
+.landing-slideshow-btns > * {
+    aspect-ratio: 1;
+    height: fit-content;
+    /* overwrite default button style to match .nav-icons */
+    padding: 0;
+}
+
+.landing-slideshow-btns > * > i {
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
 }
 
 /* landing end */
@@ -174,6 +215,10 @@ main {
 /* Videos end */
 
 /* File not found */
+
+#file_not_found {
+    display: flex;
+}
 
 .file_not_found_icon {
     font-size: 175px;

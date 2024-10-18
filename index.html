@@ -19,13 +19,14 @@
 
 	<!-- External Scripts -->
 	<script src="scripts/component_system.js"></script>
+	<script src="scripts/landing.js"></script>
 	<script src="scripts/localization.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="https://kit.fontawesome.com/cfc0e682fc.js" crossorigin="anonymous"></script>
 	<!-- External Scripts end -->
 </head>
 
-<body class="home" onload="init()">
+<body class="home" onload="init(); initLanding()">
 	<noscript>
 		<link rel="stylesheet" href="styles/noscript/noscript.css">
 		<link rel="stylesheet" href="styles/noscript/responsive.css">
@@ -42,21 +43,45 @@
 
 	<nav component-name="nav"></nav>
 
-	<main class="home">
-		<div class="gap-1rem" id="landing">
-			<h1 data-text="headline"></h1>
-			<p data-text="tagline"></p>
-			<div class="landing-btns margin-top-0_5rem">
-				<a href="https://youtube.com/@MakeThingsSimple?sub_confirmation=1">
-					<button class="cta primary">
-						<p class="uppercase" data-text="subscribe_now"></p>
-					</button>
-				</a>
-				<a href="https://youtube.com/@MakeThingsSimple" target="_blank">
-					<button class="cta secondary">
-						<p data-text="visit_our_youtube_channel"></p>
-					</button>
-				</a>
+	<main>
+		<div id="home">
+			<div class="landing-slideshow display-flex position-relative">
+				<section class="vertical flex-align-center gap-1rem" id="landing">
+					<h1 data-text="headline"></h1>
+					<p data-text="tagline"></p>
+					<div class="landing-btns margin-top-0_5rem">
+						<a href="https://youtube.com/@MakeThingsSimple?sub_confirmation=1">
+							<button class="cta primary">
+								<p class="text-transform-uppercase" data-text="subscribe_now"></p>
+							</button>
+						</a>
+						<a href="https://youtube.com/@MakeThingsSimple" target="_blank">
+							<button class="cta secondary">
+								<p data-text="visit_our_youtube_channel"></p>
+							</button>
+						</a>
+					</div>
+				</section>
+				<section class="vertical gap-1rem" id="std">
+					<h1 data-text="std"></h1>
+					<p data-text="std_description"></p>
+
+					<a href="https://github.com/makethingssimple241/std">
+						<button class="cta primary">
+							<p data-text="std_view_gh_page"></p>
+						</button>
+					</a>
+				</section>
+			</div>
+			
+			<div class="horizontal landing-slideshow-btns">
+				<button class="secondary" onclick="landingScroll(-1)">
+					<i class="fa-solid fa-chevron-left"></i>
+				</button>
+
+				<button class="secondary" onclick="landingScroll(+1)">
+					<i class="fa-solid fa-chevron-right"></i>
+				</button>
 			</div>
 		</div>
 		<div id="about">
