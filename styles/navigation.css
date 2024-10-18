@@ -25,6 +25,7 @@ nav .nav-icons > *:hover {
     aspect-ratio: 1;
     display: none;
     height: fit-content;
+    padding: 5px;
 }
 
 .menu-btn .bars {
