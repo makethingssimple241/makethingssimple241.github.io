@@ -21,6 +21,7 @@ permalink: /404.html
 	<!-- External CSS end -->
 
 	<!-- External Scripts -->
+	<script src="scripts/component_system.js"></script>
 	<script src="scripts/main.js"></script>
 	<script src="scripts/localization.js"></script>
 	<script src="https://kit.fontawesome.com/cfc0e682fc.js" crossorigin="anonymous"></script>
@@ -30,8 +31,8 @@ permalink: /404.html
 <body class="home" onload="init()">
 	<nav component-name="nav"></nav>
 
-	<main class="home">
-		<div id="landing">
+	<main>
+		<div class="vertical gap-1rem text-align-center" id="file-not-found">
 			<i class="file_not_found_icon fa-solid fa-triangle-exclamation"></i>
 			<h1 data-text="file_not_found"></h1>
 			<p data-text="file_not_found_description"></p>

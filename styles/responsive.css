@@ -124,8 +124,7 @@
     /* Main */
 
     .landing-btns {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        flex-direction: column;
     }
 
     /* Main end */
