@@ -14,7 +14,7 @@ main {
 
 #home,
 #about,
-#file_not_found {
+#file-not-found {
     height: 100dvh;
     height: 100vh;
     position: relative;
@@ -60,12 +60,26 @@ main {
 .landing-btns {
     align-items: center;
     display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
     justify-items: center;
 }
 
-.landing-btns a {
+.landing-btns:nth-child(3n + 1) {
+    grid-column: 1;
+}
+
+.landing-btns:nth-child(3n + 2) {
+    grid-column: 2;
+}
+
+.landing-btns:nth-child(3n + 3) {
+    grid-column: 3;
+}
+
+.landing-btns > * {
+    text-wrap: nowrap;
     width: 100%;
 }
 
@@ -223,10 +237,6 @@ main {
 /* Videos end */
 
 /* File not found */
-
-#file_not_found {
-    display: flex;
-}
 
 .file_not_found_icon {
     font-size: 175px;

@@ -181,6 +181,10 @@ select:hover
     text-align: left;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 .text-transform-uppercase {
     text-transform: uppercase;
 }
