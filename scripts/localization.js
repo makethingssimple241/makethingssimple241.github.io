@@ -1,23 +1,27 @@
 async function localize(preference = null) {
     let avaliableLocalizations = ["en-gb", "zh-tw"]
-    let localizationLanguage = "en-gb"
-    let languageSwitcher = document.querySelector("#language-selector")
+    let defaultLanguage = avaliableLocalizations[0]
+    let selectedLanguage = preference
 
-    if (preference == null) {
-        let netLanguage = navigator.language
-
-        avaliableLocalizations.forEach((value, index, array) => {
-            if (netLanguage.toLowerCase() === value) {
-                localizationLanguage = netLanguage.toLowerCase()
-            }
-        })
-    } else if (avaliableLocalizations.findIndex((element) => element == preference) != -1) {
-        localizationLanguage = preference
+    if (selectedLanguage == null) {
+        let previousLanguage = localStorage.getItem("language")
+        if (previousLanguage) {
+            selectedLanguage = previousLanguage
+        } else {
+            selectedLanguage = navigator.language.toLowerCase()
+        }
     }
 
-    languageSwitcher.value = localizationLanguage
+    if (avaliableLocalizations.findIndex((element) => element == selectedLanguage) == -1) {
+        selectedLanguage = defaultLanguage
+    }
 
-    let res = await fetch(`../localization/${localizationLanguage}.json`)
+    let languageSwitcher = document.querySelector("#language-selector")
+    languageSwitcher.value = selectedLanguage
+
+    localStorage.setItem("language", selectedLanguage)
+
+    let res = await fetch(`../localization/${selectedLanguage}.json`)
     let obj = await res.json()
     let strings = Object.values(obj)[0]
 
