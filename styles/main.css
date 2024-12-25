@@ -165,6 +165,10 @@ main {
     position: relative;
 }
 
+.timeline-icon i {
+    color: var(--accent-color);
+}
+
 .timeline-icon::after {
     background-color: var(--accent-color);
     border-radius: 50%;
