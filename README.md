@@ -4,7 +4,7 @@ Welcome to the official repository of [MakeThingsSimple](https://youtube.com/@Ma
 
 ## A short introduction to MakeThingsSimple
 
-### 💧 The content we make
+### 📹 The content we make
 We will make high-quality computer tutorials on programming, graphics design, etc.
 
 ### ⚡️ Our mission

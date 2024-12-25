@@ -2,12 +2,16 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 :root {
-    font-size: 16px;
+    font-size: 18px;
     --accent-color: #d93a1e;
     --background-color: #fbfcf8;
     --secondary-accent-color: blanchedalmond;
-    --secondary-background-color: #fdf6e4;
     --text-color: black;
+    --inverted-text-color: white;
+
+    --footer-z-index: 1;
+    --nav-z-index: 2;
+    --menu-z-index: 3;
 }
 
 * {
@@ -72,7 +76,7 @@ button.primary {
 }
 
 button.primary * {
-    color: black;
+    color: var(--inverted-text-color);
 }
 
 button.secondary {
@@ -92,53 +96,41 @@ select {
     text-align-last: center;
 }
 
-select:hover {
+button.secondary:hover,
+select:hover
+{
     background-color: rgba(170, 170, 170, 0.25) !important;
 }
 
-.link {
-    position: relative;
+/* MARK: Properties
+ */
+
+.align-items-center {
+    align-items: center;
 }
 
-.link small {
-    margin: 0;
+.aspect-ratio-1 {
+    aspect-ratio: 1;
 }
 
-.link::after,
-.link p::after,
-.navLinks li:after {
-    background-color: var(--text-color);
-    border-radius: 3px;
-    bottom: -0.25rem;
-    content: "";
-    height: 3px;
-    left: 0;
-    position: absolute;
-    transition: width .1s ease-in-out;
-    width: 0;
-}
-
-.link:hover::after,
-.link:hover p::after,
-.navLinks li:hover::after {
-    width: 100%;
-}
-
-.emphasis {
-    color: var(--accent-color);
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.circleImg {
+.border-radius-50p {
     border-radius: 50%
 }
 
-.horizontal {
-    align-items: center;
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.display-flex {
     display: flex;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.gap-0_25rem {
+    gap: 0.25rem;
 }
 
 .gap-0_5rem {
@@ -157,57 +149,124 @@ select:hover {
     justify-content: right;
 }
 
+.margin-left-0_5rem {
+    margin-left: 1rem;
+}
+
+.margin-left-1rem {
+    margin-left: 1rem;
+}
+
 .margin-right-1rem {
     margin-right: 1rem;
+}
+
+.margin-top-0_5rem {
+    margin-top: 0.5rem;
 }
 
 .margin-top-1_25rem {
     margin-top: 1.25rem;
 }
 
-.navLinks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding-inline-start: 0;
+.padding-bottom-3rem {
+    padding-bottom: 3rem;
 }
 
-.navLinks li {
-    padding-left: 0;
-    display: inline-block;
-    list-style: none;
+.position-relative {
     position: relative;
 }
 
-.socialLinks {
-    display: flex;
-    gap: 18px;
+.text-align-left {
+    text-align: left;
 }
 
-.socialLinks i,
-.socialLinks .menuBtnContainer {
-    background-color: var(--secondary-accent-color);
-    border-radius: 0.4rem;
-    color: black;
-    font-size: 18px;
-    line-height: 25px;
-    padding: 5px;
+.text-align-center {
     text-align: center;
-    vertical-align: middle;
 }
 
-.socialLinks i {
-    height: 25px;
-    width: 25px;
+.text-transform-uppercase {
+    text-transform: uppercase;
 }
 
-.socialLinks .menuBtnContainer {
-    display: none;
-    height: 35px;
-    width: 35px;
+/* MARK: Utilities
+ */
+
+.flex-align-center {
+    /* center align flex items along the cross axis of the flex axis */
+    align-items: center;
+    /* center align flex items along the flex axis */
+    justify-content: center;
 }
 
-.socialLinks i:hover {
+.horizontal {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.vertical {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link {
+    position: relative;
+}
+
+.link small {
+    margin: 0;
+}
+
+.link::after,
+.link p::after {
+    background-color: var(--text-color);
+    border-radius: 3px;
+    bottom: -0.25rem;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: width .1s ease-in-out;
+    width: 0;
+}
+
+.link:hover::after,
+.link:hover p::after {
+    width: 100%;
+}
+
+.nav-links {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-icons .social {
+    border-radius: 0.5rem;
+    height: fit-content;
+}
+
+.nav-icons .social > i {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    padding: 5px;
+}
+
+.nav-icons:not(nav .nav-icons) > * {
+    background-color: var(--secondary-accent-color);
+}
+
+.nav-icons:not(nav .nav-icons) i:hover {
     color: var(--accent-color);
 }

@@ -5,9 +5,15 @@
         "tagline": "免費高質電腦教育視頻",
         "subscribe_now": "立即訂閱",
         "visit_our_youtube_channel": "造訪我們的YouTube頻道",
+
+        "std": "std",
+        "std_description": "一個把C++的STL和Boost加到C的函式庫",
+        "std_view_gh_page": "造訪這函式庫的GitHub",
+
         "home": "首頁",
         "about": "關於我們",
         "videos": "影片",
+
         "the_content_we_make": "我們製作的內容",
         "the_content_we_make_p": "我們製作的內容是免費，高質的編程、電腦藝術設計等教育視頻。",
         "our_mission": "我們的使命",

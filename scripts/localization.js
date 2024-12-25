@@ -1,32 +1,31 @@
-async function localize(language) {
-    const language_switcher = document.querySelector("#language-selector")
-    const avaliable_localizations = ["en-gb", "zh-tw"]
-    let localization_language = "en-gb"
+async function localize(preference = null) {
+    let avaliableLocalizations = ["en-gb", "zh-tw"]
+    let defaultLanguage = avaliableLocalizations[0]
+    let selectedLanguage = preference
 
-    avaliable_localizations.forEach((value, index, array) => {
-        if (language.toLowerCase() === value) {
-            localization_language = language.toLowerCase()
+    if (selectedLanguage == null) {
+        let previousLanguage = localStorage.getItem("language")
+        if (previousLanguage) {
+            selectedLanguage = previousLanguage
+        } else {
+            selectedLanguage = navigator.language.toLowerCase()
         }
-    })
+    }
 
-    language_switcher.value = localization_language
+    if (avaliableLocalizations.findIndex((element) => element == selectedLanguage) == -1) {
+        selectedLanguage = defaultLanguage
+    }
 
-    let res = await fetch(`../localization/${localization_language}.json`)
+    let languageSwitcher = document.querySelector("#language-selector")
+    languageSwitcher.value = selectedLanguage
+
+    localStorage.setItem("language", selectedLanguage)
+
+    let res = await fetch(`../localization/${selectedLanguage}.json`)
     let obj = await res.json()
-    strings = Object.values(obj)[0]
+    let strings = Object.values(obj)[0]
 
-    let elements = document.querySelectorAll('[data-text]')
-
-    elements.forEach((value, key) => {
+    document.querySelectorAll('[data-text]').forEach((value, key) => {
         value.innerHTML = strings[value.dataset.text]
     })
-}
-
-async function localize_element(element_query, language) {
-    let res = await fetch(`../localization/${language.toLowerCase()}.json`)
-    let obj = await res.json()
-    strings = Object.values(obj)[0]
-
-    let element = document.querySelector(element_query)
-    element.setHTML(strings[element.dataset.text])
 }
